@@ -240,14 +240,14 @@ window.onload =() =>{
    
   document.getElementById('selectRol').addEventListener("change",()=>{
     let condition=document.getElementById('selectRol').value;
-    let datafilter=filterData(data,condition);
+    let datafilter=window.data.filterData(data,condition);
     showCards(datafilter);   
   });
 
   document.getElementById('selectOrder').addEventListener("change",()=>{
     
     let sortOrder=document.getElementById('selectOrder').value;
-    let datasort=sortData(data,"id",sortOrder);
+    let datasort=window.data.sortData(data,"id",sortOrder);
     showCards(datasort);
   });
 
@@ -262,7 +262,7 @@ document.getElementById("page4").style.display="block";
 
 
 document.getElementById('root').innerHTML=''
-const listAverage=computeStats(data);
+const listAverage=window.data.computeStats(data);
 let image=["assassin.jpeg","fighter.jpeg","mage.jpeg","marksman.jpeg","support.jpeg","tank.jpeg"];
 for(let k=0; k<listAverage.length;k++){
   const average=listAverage[k];  
@@ -681,7 +681,7 @@ for(let k=0; k<listAverage.length;k++){
    
   document.getElementById('selectRol').addEventListener("change",()=>{
     let condition=document.getElementById('selectRol').value;
-    let datafilter=filterData(data,condition);
+    let datafilter=window.data.filterData(data,condition);
     showCards(datafilter);   
   });
 
@@ -697,7 +697,7 @@ document.getElementById("page4").style.display="block";
 
 
 document.getElementById('root').innerHTML=''
-const listAverage=computeStats(data);
+const listAverage=window.data.computeStats(data);
 let image=["assassin.jpeg","fighter.jpeg","mage.jpeg","marksman.jpeg","support.jpeg","tank.jpeg"];
 for(let k=0; k<listAverage.length;k++){
   const average=listAverage[k];  
@@ -1120,7 +1120,7 @@ document.addEventListener('DOMContentLoaded', function() {
    
   document.getElementById('selectRol').addEventListener("change",()=>{
     let condition=document.getElementById('selectRol').value;
-    let datafilter=filterData(data,condition);
+    let datafilter=window.data.filterData(data,condition);
     showCards(datafilter);   
   });
 

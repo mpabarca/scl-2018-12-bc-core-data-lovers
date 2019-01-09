@@ -1,15 +1,18 @@
-const data= Object.values(LOL.data);
+ window.data ={
 
-function filterData(data,condition) {
-    const category=data.filter(tipos =>{
+dataBase: Object.values(LOL.data),
+
+
+filterData: (dataBase,condition) => {
+    const category=data.dataBase.filter(tipos =>{
     return tipos.tags.indexOf(condition)!==-1;
   });
   return category;
-}
- 
-function sortData(data,sortBy,sortOrder){
+},
+
+sortData: (dataBase,sortBy,sortOrder) => {
   if(sortBy==="id" && sortOrder === "a-z" ){
-    data.sort((a,b)=>{
+    data.dataBase.sort((a,b)=>{
       if(b.id>a.id){
         return -1;
       }
@@ -20,7 +23,7 @@ function sortData(data,sortBy,sortOrder){
     });
   }
   if(sortBy==="id" && sortOrder === "z-a" ){
-    data.sort((a,b)=>{
+    data.dataBase.sort((a,b)=>{
      if(a.id>b.id){
         return -1;
       }
@@ -30,26 +33,26 @@ function sortData(data,sortBy,sortOrder){
       return 0;
     });
   }
-  return data
-}
+  return data.dataBase
+},
 
-function findChampion(id) {
+findChampion: (id) => {
   let championInfo;
-  for(let i=0; i<data.length;i++){
-    if(data[i].id===id){
-     championInfo=data[i]
+  for(let i=0; i<dataBase.length;i++){
+    if(data.dataBase[i].id===id){
+     championInfo=data.dataBase[i]
     }
   }
   return championInfo;
-}
+},
 
-function computeStats(datos) {
+computeStats: (dataBase) =>{
   let tag=["Assassin","Fighter","Mage","Marksman","Support","Tank"];      
   let list_tag=[];
   
   for (let m=0;m<tag.length; m++){
       let name= tag[m];
-      let categoria=filterData(datos,name);
+      let categoria=data.filterData(data.dataBase,name);
       let p=0;
       let list= [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];    
       
@@ -81,4 +84,5 @@ function computeStats(datos) {
       list_tag.push(list);
   }
   return list_tag;
+}
 }
