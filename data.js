@@ -1,15 +1,19 @@
-const data= Object.values(LOL.data);
+window.data ={
 
-function filterData(data,condition) {
-    const category=data.filter(tipos =>{
-    return tipos.tags.indexOf(condition)!==-1;
+filterData: (data,condition) => {
+  const lolData= data;
+  const championData= Object.values(lolData.data);
+  const category=championData.filter(tipos =>{
+  return tipos.tags.indexOf(condition)!==-1;
   });
   return category;
-}
+},
  
-function sortData(data,sortBy,sortOrder){
+sortData: (data,sortBy,sortOrder) => {
+  const lolData= data;
+  const championData= Object.values(lolData.data);
   if(sortBy==="id" && sortOrder === "a-z" ){
-    data.sort((a,b)=>{
+    championData.sort((a,b)=>{
       if(b.id>a.id){
         return -1;
       }
@@ -20,7 +24,7 @@ function sortData(data,sortBy,sortOrder){
     });
   }
   if(sortBy==="id" && sortOrder === "z-a" ){
-    data.sort((a,b)=>{
+    championData.sort((a,b)=>{
      if(a.id>b.id){
         return -1;
       }
@@ -30,26 +34,26 @@ function sortData(data,sortBy,sortOrder){
       return 0;
     });
   }
-  return data
-}
+  return championData;
+},
 
-function findChampion(id) {
+findChampion: (data,id) => {
+  const championData = data
   let championInfo;
-  for(let i=0; i<data.length;i++){
-    if(data[i].id===id){
-     championInfo=data[i]
+  for(let i=0; i<championData.length;i++){
+    if(championData[i].id===id){
+     championInfo=championData[i]
     }
   }
   return championInfo;
-}
+},
 
-function computeStats(datos) {
+computeStats: (data) =>{
     let tag=["Assassin","Fighter","Mage","Marksman","Support","Tank"];      
     let list_tag=[];
-    
     for (let m=0;m<tag.length; m++){
         let name= tag[m];
-        let categoria=filterData(datos,name);
+        let categoria=window.data.filterData(data,name);
         let p=0;
         let list= [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];    
         
@@ -80,6 +84,7 @@ function computeStats(datos) {
         }           
         list_tag.push(list);
     }
-    console.log(list_tag);
+    
     return list_tag;
+}
 }
