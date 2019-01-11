@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function(){
-  M.AutoInit();
+  window.M.AutoInit(); 
 });
 
 
@@ -13,7 +13,7 @@ window.onload =() =>{
   document.getElementById("page1").style.display="none";
   document.getElementById("page2").style.display="block";
   document.getElementById("page4").style.display="none";
-  showCards(data);
+  showCards(window.data);
 })
  
   function showCards(data) {
@@ -52,7 +52,7 @@ window.onload =() =>{
   function showDetail(id) {
     document.getElementById("page2").style.display="none";
     document.getElementById("page3").style.display="block";
-    let championDetail = window.data.findChampion(data,id);
+    let championDetail = window.data.findChampion(window.data,id);
     document.getElementById("champions-detail").innerHTML = `
       <div class="card large">
         <div>
@@ -241,21 +241,21 @@ window.onload =() =>{
            document.getElementById("page2").style.display="block";
            document.getElementById("page3").style.display="none";
            document.getElementById("page4").style.display="none";
-           showCards(data);
+           showCards(window.data);
          });
        }
    }
    
   document.getElementById('selectRol').addEventListener("change",()=>{
     let condition=document.getElementById('selectRol').value;
-    let datafilter=window.data.filterData(LOL,condition);
+    let datafilter=window.data.filterData(window.LOL,condition);
     showCards(datafilter);   
   });
 
   document.getElementById('selectOrder').addEventListener("change",()=>{
     
     let sortOrder=document.getElementById('selectOrder').value;
-    let datasort=window.data.sortData(LOL,"id",sortOrder);
+    let datasort=window.data.sortData(window.LOL,"id",sortOrder);
     showCards(datasort);
   });
   document.getElementById("champions").addEventListener("click",
@@ -277,15 +277,15 @@ window.onload =() =>{
   document.getElementById("page2").style.display="none";
   document.getElementById("page3").style.display="none";
   document.getElementById("page4").style.display="block";
-  showStats(data);
+  showStats(window.data);
   });
 
-  function showStats(data){
+  function showStats(){
   
   
   
 document.getElementById('root').innerHTML=''
-const listAverage=window.data.computeStats(LOL);
+const listAverage=window.data.computeStats(window.LOL);
 let image=["assassin.jpeg","fighter.jpeg","mage.jpeg","marksman.jpeg","support.jpeg","tank.jpeg"];
 for(let k=0; k<listAverage.length;k++){
  const average=listAverage[k]; 
@@ -475,7 +475,7 @@ for(let k=0; k<listAverage.length;k++){
 
   document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.sidenav');
-    var instances = M.Sidenav.init(elems);
+    window.M.Sidenav.init(elems);
 
   });
   document.getElementById("page3").style.display="none";
@@ -487,7 +487,7 @@ for(let k=0; k<listAverage.length;k++){
     document.getElementById("page2").style.display="block";
     document.getElementById("page4").style.display="none";
 
-    showCards(data);
+    showCards(window.data);
   });
   
   document.getElementById("stats-1").addEventListener("click",
@@ -498,7 +498,7 @@ for(let k=0; k<listAverage.length;k++){
   document.getElementById("page2").style.display="none";
   document.getElementById("page3").style.display="none";
   document.getElementById("page4").style.display="block";
-  showStats(data);
+  showStats(window.data);
   });
 
 };
