@@ -47,6 +47,7 @@ findChampion: (data,id) => {
     }
   }
   return championInfo;
+  
 },
 
 computeStats: (data) =>{
@@ -85,7 +86,6 @@ computeStats: (data) =>{
         }           
         list_tag.push(list);
     }
-    
     return list_tag;
 }
 }
