@@ -6969,5 +6969,15 @@ const LOL = {
         attackspeedperlevel: 2.11
       }
     }
-  } //cierre de la data
+  } 
 };
+//NUEVO PARA ASI LOGRAR TEST
+
+const dataTest = () => {
+  let list = [];
+  for (let champion in LOL.data) {
+    list.push(LOL.data[champion]);
+  }
+  return list;
+}
+window.dataTest = dataTest;

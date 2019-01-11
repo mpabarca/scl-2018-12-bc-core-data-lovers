@@ -8,9 +8,9 @@ body{
 
 #lol-logo{
     width: 140px;
-    height: 45px;
-    margin-left: 40px;
-    margin-top: 7px;
+    height: 50px;
+    margin-left: 50px;
+    margin-top: 5px;
 }
 
 .nav-wrapper li a{   
@@ -18,7 +18,7 @@ body{
     padding:10px 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #9C865A;
-    
+    margin-right: 20px;
 }
 
 h1{
@@ -26,25 +26,24 @@ h1{
     color:#D0BFD8;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
-
 }
 
 #text.col.s12.m6.l6{
     font-size: 18px ;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
     color:#D0BFD8;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 #page-image.responsive-img.col.s12.m6.l6{
     
-    height: 250px;
+    height: 300px;
     margin-top:20px;
+
 }
 
 #start{
     float: right;
-    margin:-20px;
     margin-right: 20px;
     background-color: #9C865A;
     border-radius: 5px;
@@ -54,7 +53,6 @@ h1{
 
 #start a{
     color:#D0BFD8;
-    
 }
 
 .page-footer{
@@ -67,13 +65,12 @@ h1{
 #page2{
     display: none;
 }
+
 #page4{
     display: none;
 }
 
-
-#root, #root1{
-    
+#root{
     color:#9C865A;
 }
 
@@ -85,12 +82,10 @@ input.select-dropdown.dropdown-trigger{
     margin-top: 20px;
     margin-bottom: 20px;
 }
-   
 
 div.card-image{
     width: 150px;
     height: 170px;
-    
 }
 
 .card{
@@ -99,38 +94,36 @@ div.card-image{
     margin-bottom: 10px;
     height: 230px;
     width: 170px;
-    
 }
 
 .card .card-reveal {
-
     padding: 12px;
     top: 107%;
     height: 110%;
 }
+
 img.responsive-img{
     width: 170px;
     height: 130px;
 }
 
 h2{
-    font-size: 30px;
+    font-size: 28px;
     color:#9C865A;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
     text-align: center;
 }
 
 .waves-effect.waves-light.btn.modal-trigger{
-    background-color: beige;
-    
+    background-color:#9C865A;
 }
+
 .link{
     color: cadetblue;
     cursor: pointer;
-
 }
+
 .link2{
-    
     cursor: pointer;
     float:right;
     margin-right: 25px;
@@ -138,37 +131,34 @@ h2{
     font-size: 30px;
     color: solid black;
 }
+
 .card.large {
     width: 880px;
     height: auto;
+    margin:40px;
+    margin-left:-10%;
 }
 
-h3,h4{
+h3{
     font-size: 24px;
     color:black;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
-    
-
 }
+
 #image-info, #info-champion{
 margin: 10px;
 padding: 10px;
 }
 
-
-
 #image-info, #champion-name{
     float: left;
-  }
+}
+
  #champion-name{
     margin-left: 250px;
- }
+}
  
-
-
-
-
 #info-table{
     width: 400px;
     height: 250px;
@@ -183,5 +173,51 @@ padding: 10px;
 .responsive-image{
     width: 200px;
     height:200px;
+    margin-top:40px;
+}
 
+div.col.l9{
+    margin-top: 40px;
+}
+
+#result-table{
+    color:#D0BFD8;
+}
+
+@media only screen
+and (max-width : 480px) {
+    .card.large { 
+        width:320px;
+        margin-left:3%;
+    }
+    
+    #champion-name {
+        font-size:18px;
+        margin-left:0%;
+    }
+
+    h4{
+        font-size:18px;
+    }        
+    span.link2{
+        font-size: 15px;
+        margin-right: 15px;
+        margin-top:10px
+    }
+    h2{
+        font-size: 20px;
+    }
+    img.responsive-image{
+        width: 150px;
+        height:150px;
+        margin-top:20px;
+    }
+}
+
+@media only screen
+and (min-width: 480px)and(max-width: 767px) {
+    .card.large { 
+        width:400px;
+        margin-left:-60%;
+    }
 }
