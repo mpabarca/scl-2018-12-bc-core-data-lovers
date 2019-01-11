@@ -6971,13 +6971,5 @@ const LOL = {
     }
   } 
 };
-//NUEVO PARA ASI LOGRAR TEST
+window.LOL=LOL;
 
-const dataTest = () => {
-  let list = [];
-  for (let champion in LOL.data) {
-    list.push(LOL.data[champion]);
-  }
-  return list;
-}
-window.dataTest = dataTest;

@@ -38,7 +38,8 @@ sortData: (data,sortBy,sortOrder) => {
 },
 
 findChampion: (data,id) => {
-  const championData = data
+  const lolData = data
+  const championData= Object.values(lolData.data);
   let championInfo;
   for(let i=0; i<championData.length;i++){
     if(championData[i].id===id){
