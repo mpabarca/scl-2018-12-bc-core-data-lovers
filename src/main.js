@@ -45,14 +45,16 @@ window.onload =() =>{
         links[i].addEventListener('click', (event) => {
           event.preventDefault();
           const id = event.srcElement.dataset.champion;
+          
          showDetail(id);
         });
        }
    }
   function showDetail(id) {
+    
     document.getElementById("page2").style.display="none";
     document.getElementById("page3").style.display="block";
-    let championDetail = window.data.findChampion(window.data,id);
+    let championDetail = window.data.findChampion(window.LOL,id);
     document.getElementById("champions-detail").innerHTML = `
       <div class="card large">
         <div>

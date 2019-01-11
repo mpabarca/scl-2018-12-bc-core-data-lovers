@@ -46,11 +46,11 @@ describe('lol', () => {
             window.assert.equal(typeof window.data.findChampion,'function');
         });
         it('Debería retornar los tags del campeon con id=Akali',()=>{
-            let tagsAkali=window.data.findChampion(window.LOL,'Akali')[2].id;
+            let tagsAkali=window.data.findChampion(window.LOL,'Akali').tags;
             window.assert.equal(tagsAkali,"Assassin");
         });
         it('Debería retornar el titulo del campeon con id=Ahri',()=>{
-            let tittleAhri=window.data.findChampion(window.LOL,'Ahri')[1].id;
+            let tittleAhri=window.data.findChampion(window.LOL,'Ahri').title;
             window.assert.equal(tittleAhri,"the Nine-Tailed Fox");            
         });
     });    
@@ -60,11 +60,11 @@ describe('lol', () => {
             window.assert.equal(typeof window.data.computeStats,'function');
         });
         it('Debería retornar el promedio de Attack de todos los campeones de la categoría Support',()=>{
-            let averageSupport=window.data.computeStats(window.LOL,'Support')[0][0];
+            let averageSupport=window.data.computeStats(window.LOL)[4][0];
             window.assert.equal(averageSupport,3.30);
         });
         it('Debería retornar el promedio de MP de todos los campeones de la categoría Mage ',()=>{
-            let averageMage=window.data.computeStats(window.LOL,'Mage')[0][0];
+            let averageMage=window.data.computeStats(window.LOL)[2][6];
             window.assert.equal(averageMage,3.55);            
         });
     })
