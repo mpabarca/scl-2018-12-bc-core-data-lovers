@@ -13,11 +13,11 @@ window.onload =() =>{
   document.getElementById("page1").style.display="none";
   document.getElementById("page2").style.display="block";
   document.getElementById("page4").style.display="none";
-  showCards(window.data);
+  showCards(window.LOL);
 })
  
   function showCards(data) {
-  document.getElementById("page3").style.display="none";
+  document.getElementById("page3").style.display="none";  
     
   document.getElementById('root').innerHTML='';
   document.getElementById('champions-list').innerHTML = '';
@@ -39,13 +39,12 @@ window.onload =() =>{
             </div>
           </div>
         </div> ` 
-     }
+      }
      const links = document.getElementsByClassName('link');
      for (let i = 0; i < links.length; i++) {
         links[i].addEventListener('click', (event) => {
           event.preventDefault();
-          const id = event.srcElement.dataset.champion;
-          
+          const id = event.srcElement.dataset.champion;          
          showDetail(id);
         });
        }
@@ -243,7 +242,7 @@ window.onload =() =>{
            document.getElementById("page2").style.display="block";
            document.getElementById("page3").style.display="none";
            document.getElementById("page4").style.display="none";
-           showCards(window.data);
+           showCards(window.LOL);
          });
        }
    }
@@ -268,7 +267,7 @@ window.onload =() =>{
     document.getElementById("page3").style.display="none";
     document.getElementById("page4").style.display="none";
     
-    showCards(window.data);
+    showCards(window.LOL);
   })
 
   document.getElementById("stats").addEventListener("click",
@@ -279,7 +278,7 @@ window.onload =() =>{
   document.getElementById("page2").style.display="none";
   document.getElementById("page3").style.display="none";
   document.getElementById("page4").style.display="block";
-  showStats(window.data);
+  showStats();
   });
 
   function showStats(){
@@ -489,7 +488,7 @@ for(let k=0; k<listAverage.length;k++){
     document.getElementById("page2").style.display="block";
     document.getElementById("page4").style.display="none";
 
-    showCards(window.data);
+    showCards(window.LOL);
   });
   
   document.getElementById("stats-1").addEventListener("click",
@@ -500,7 +499,7 @@ for(let k=0; k<listAverage.length;k++){
   document.getElementById("page2").style.display="none";
   document.getElementById("page3").style.display="none";
   document.getElementById("page4").style.display="block";
-  showStats(window.data);
+  showStats();
   });
 
 };
