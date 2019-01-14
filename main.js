@@ -13,11 +13,11 @@ window.onload =() =>{
   document.getElementById("page1").style.display="none";
   document.getElementById("page2").style.display="block";
   document.getElementById("page4").style.display="none";
-  showCards(window.data);
+  showCards(window.LOL);
 })
  
   function showCards(data) {
-    const lolData= data;
+    const lolData= Object.values(data.data);
   document.getElementById("page3").style.display="none";  
     
   document.getElementById('root').innerHTML='';
