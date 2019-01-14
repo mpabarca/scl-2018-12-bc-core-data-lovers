@@ -55,26 +55,26 @@ window.data ={
       let list_tag=[];
       for (let m=0;m<tag.length; m++){
           let name= tag[m];
-          let categoria=window.data.filterData(data,name);
+          let category=window.data.filterData(data,name);
           let p=0;
           let list= [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];    
           
-          for (let i=0;i<categoria.length; i++){ //en algun momento i será la cantidad maxima de campeones
+          for (let i=0;i<category.length; i++){ //en algun momento i será la cantidad maxima de campeones
               
-              let champion=categoria[i] //objeto  
+              let champion=category[i] //objeto  
               
-              const information1 = ((champion || {}).info); //objeto
-              const information= Object.entries(information1); //array
+              const infoObject = ((champion || {}).info); //objeto
+              const infoArray= Object.entries(infoObject); //array
               
-              const statics1=((champion || {}).stats); //objeto
-              const statics= Object.entries(statics1); //array   
+              const statsObject=((champion || {}).stats); //objeto
+              const statsArray= Object.entries(statsObject); //array   
   
               for (let j=0;j<4;j++){
-                  let n=information[j][1];
+                  let n=infoArray[j][1];
                   list[j]+=n;                         
               }
               for (let j=4;j<20;j++){
-                  let n=statics[j][1];
+                  let n=statsArray[j][1];
                   list[j]+=n;            
               }
               p+=1;        

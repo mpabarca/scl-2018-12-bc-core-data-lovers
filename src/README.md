@@ -9,7 +9,7 @@ League of Legends ofrece posibilidades de ir subiendo de nivel en el transcurso 
 
 ## Definición del producto
 
-Este producto fue diseñados para jóvenes entre 13 y 20 años que desean iniciar a jugar League of Legends y tienen poco conocimiento sobre los personajes. 
+Este producto fue diseñados para jóvenes entre 13 y 30 años que desean iniciar a jugar League of Legends y tienen poco conocimiento sobre los personajes. 
 
 Si estas aquí es porque deseas comenzar a jugar LOL. Nuestra página te ayudará en una parte de este proceso entregándote los datos de todos los campeones de éste juego. Aquí podrás encontrar fotos, historias, características, estadísticas y categorías de tu personaje. 
 
