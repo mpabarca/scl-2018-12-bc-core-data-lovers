@@ -45,7 +45,7 @@ h1{
 #start{
     float: right;
     margin-right: 20px;
-    background-color: #9C865A;
+    background-color: rgb(141, 113, 56);
     border-radius: 5px;
     width: 130px;
     text-align: center;
@@ -174,8 +174,19 @@ padding: 10px;
     width: 200px;
     height:200px;
     margin-top:40px;
+    margin-left: 40px;
 }
 
+ul#mobile-demo.sidenav{
+    background-color: #19191C;
+    width: 200px;
+}
+
+#mobile-demo.sidenav li a{
+    color: #9C865A;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+}
 div.col.l9{
     margin-top: 40px;
 }
@@ -211,6 +222,7 @@ and (max-width : 480px) {
         width: 150px;
         height:150px;
         margin-top:20px;
+        margin-left:5px;
     }
 }
 
