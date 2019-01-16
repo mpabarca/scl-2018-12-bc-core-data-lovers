@@ -297,7 +297,8 @@ const listAverage=window.data.computeStats(window.LOL);
 let image=["assassin.jpeg","fighter.jpeg","mage.jpeg","marksman.jpeg","support.jpeg","tank.jpeg"];
 for(let k=0; k<listAverage.length;k++){
  const average=listAverage[k]; 
-
+ var ctx = document.getElementById('myChart').getContext('2d');
+  
  document.getElementById("root").innerHTML+=`
  <section class="container" style="width:90%">
        <div class="row" >
