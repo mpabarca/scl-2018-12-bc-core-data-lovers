@@ -56,7 +56,6 @@ window.data ={
       for (let m=0;m<tag.length; m++){
           let name= tag[m];
           let category=window.data.filterData(data,name);
-          console.log(category);
           let p=0;
           let list= [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];    
           
@@ -87,6 +86,7 @@ window.data ={
           }           
           list_tag.push(list);
       }
+      console.log(list_tag);
       return list_tag;
   }
   }

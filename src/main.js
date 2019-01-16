@@ -294,11 +294,103 @@ window.onload =() =>{
   
 document.getElementById('root').innerHTML=''
 const listAverage=window.data.computeStats(window.LOL);
+console.log(listAverage);
 let image=["assassin.jpeg","fighter.jpeg","mage.jpeg","marksman.jpeg","support.jpeg","tank.jpeg"];
+new Chart(document.getElementById("lineChart"), {
+  type: 'line',
+  scaleSteps : 1,
+  scaleStepWidth : 40,
+  scaleStartValue : 0,
+  data: {
+    labels: ["Attack","Defense","Magic","Difficulty","MP"],
+    datasets: [{ 
+        data: [listAverage[0][0],listAverage[0][1],listAverage[0][2],listAverage[0][3],listAverage[0][6]],
+        label: "Assassin",
+        borderColsor: "#3e95cd",
+        fill: true
+      }, { 
+        data: [listAverage[1][0],listAverage[1][1],listAverage[1][2],listAverage[1][3],listAverage[1][6]],
+        label: "Fighter",
+        borderColor: "#8e5ea2",
+        fill: true
+      }, { 
+        data: [listAverage[2][0],listAverage[2][1],listAverage[2][2],listAverage[2][3],listAverage[2][6]],
+        label: "Mage",
+        borderColor: "#3cba9f",
+        fill: true
+      }, { 
+        data: [listAverage[3][0],listAverage[3][1],listAverage[3][2],listAverage[3][3],listAverage[3][6]],
+        label: "Marksman",
+        borderColor: "#e8c3b9",
+        fill: true
+      }, { 
+        data: [listAverage[4][0],listAverage[4][1],listAverage[4][2],listAverage[4][3],listAverage[4][6]],
+        label: "Support",
+        borderColor: "#c45850",
+        fill: true
+      }, { 
+        data: [listAverage[5][0],listAverage[5][1],listAverage[5][2],listAverage[5][3],listAverage[5][6]],
+        label: "Tank",
+        borderColor: "#9C865A",
+        fill: true
+      }
+    ]
+  },
+  options: {
+    title: {
+      display: true
+    }
+  }
+}); /*
+new Chart(document.getElementById("lineChartHP"), {
+  type: 'line',
+  scaleSteps : 10,
+  scaleStepWidth : 550,
+  scaleStartValue : 0,
+  data: {
+    labels: ["HP"],
+    datasets: [{ 
+        data: [listAverage[0][4]],
+        label: "Assassin",
+        borderColor: "#3e95cd",
+        fill: false
+      }, { 
+        data: [listAverage[1][4]],
+        label: "Fighter",
+        borderColor: "#8e5ea2",
+        fill: false
+      }, { 
+        data: [listAverage[2][4]],
+        label: "Mage",
+        borderColor: "#3cba9f",
+        fill: false
+      }, { 
+        data: [listAverage[3][4]],
+        label: "Marksman",
+        borderColor: "#e8c3b9",
+        fill: false
+      }, { 
+        data: [listAverage[4][4]],
+        label: "Support",
+        borderColor: "#c45850",
+        fill: false
+      }, { 
+        data: [listAverage[5][4]],
+        label: "Tank",
+        borderColor: "#8e5ea2",
+        fill: false
+      }
+    ]
+  },
+  options: {
+    title: {
+      display: true
+    }
+  }
+}); 
+*/
 for(let k=0; k<listAverage.length;k++){
  const average=listAverage[k]; 
- var ctx = document.getElementById('myChart').getContext('2d');
-  
  document.getElementById("root").innerHTML+=`
  <section class="container" style="width:90%">
        <div class="row" >
