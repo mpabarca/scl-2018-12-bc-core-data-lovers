@@ -26,7 +26,6 @@ window.onload =() =>{
     }else if (type==1){
       lolData= Object.values(data);
     }
-    console.log(lolData);
     for (let i = 0; i < lolData.length; i++) {
      
   document.getElementById('champions-list').innerHTML += `
@@ -294,7 +293,6 @@ window.onload =() =>{
   
 document.getElementById('root').innerHTML=''
 const listAverage=window.data.computeStats(window.LOL);
-console.log(listAverage);
 let image=["assassin.jpeg","fighter.jpeg","mage.jpeg","marksman.jpeg","support.jpeg","tank.jpeg"];
 new Chart(document.getElementById("lineChart"), {
   type: 'line',

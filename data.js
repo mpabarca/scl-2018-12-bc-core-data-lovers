@@ -86,7 +86,6 @@ window.data ={
           }           
           list_tag.push(list);
       }
-      console.log(list_tag);
       return list_tag;
   }
   }
