@@ -5,7 +5,7 @@ window.data ={
     const championData= Object.values(lolData.data);
     const category=championData.filter(tipos =>{
     return tipos.tags.indexOf(condition)!==-1;
-    });
+    });    
     return category;
   },
    
@@ -56,6 +56,7 @@ window.data ={
       for (let m=0;m<tag.length; m++){
           let name= tag[m];
           let category=window.data.filterData(data,name);
+          console.log(category);
           let p=0;
           let list= [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];    
           

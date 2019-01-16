@@ -13,16 +13,22 @@ window.onload =() =>{
   document.getElementById("page1").style.display="none";
   document.getElementById("page2").style.display="block";
   document.getElementById("page4").style.display="none";
-  showCards(window.LOL);
+  showCards(window.LOL,0);
 })
  
-  function showCards(data) {
-    const lolData= Object.values(data.data);
-  document.getElementById("page3").style.display="none";  
-    
-  document.getElementById('root').innerHTML='';
-  document.getElementById('champions-list').innerHTML = '';
+  function showCards(data,type) { 
+    document.getElementById("page3").style.display="none";  
+    document.getElementById('root').innerHTML='';
+    document.getElementById('champions-list').innerHTML = '';
+    var lolData=[]
+    if (type==0){
+      lolData= Object.values(data.data);
+    }else if (type==1){
+      lolData= Object.values(data);
+    }
+    console.log(lolData);
     for (let i = 0; i < lolData.length; i++) {
+     
   document.getElementById('champions-list').innerHTML += `
     <div class="col s6 m3" >
       <div class="card">
@@ -36,7 +42,7 @@ window.onload =() =>{
               <p> Defensa: ${ lolData[i].info.defense }</p>
               <p> Magia: ${ lolData[i].info.magic }</p>
               <p> Dificultad: ${ lolData[i].info.difficulty }</p>
-              <span class="link" data-champion='${lolData[i].id}'>Ver mas</span>
+              <span class="link" data-champion='${lolData.id}'>Ver mas</span>
             </div>
           </div>
         </div> ` 
@@ -250,15 +256,15 @@ window.onload =() =>{
    
   document.getElementById('selectRol').addEventListener("change",()=>{
     let condition=document.getElementById('selectRol').value;
-    let datafilter=window.data.filterData(window.LOL,condition);
-    showCards(datafilter);   
+    let dataFilter=window.data.filterData(window.LOL,condition);
+    showCards(dataFilter,1);   
   });
 
   document.getElementById('selectOrder').addEventListener("change",()=>{
     
     let sortOrder=document.getElementById('selectOrder').value;
     let datasort=window.data.sortData(window.LOL,"id",sortOrder);
-    showCards(datasort);
+    showCards(datasort,1);
   });
   document.getElementById("champions").addEventListener("click",
   (event) => {
@@ -268,7 +274,7 @@ window.onload =() =>{
     document.getElementById("page3").style.display="none";
     document.getElementById("page4").style.display="none";
     
-    showCards(window.LOL);
+    showCards(window.LOL,0);
   })
 
   document.getElementById("stats").addEventListener("click",
