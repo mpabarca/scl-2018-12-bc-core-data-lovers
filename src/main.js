@@ -50,7 +50,8 @@ window.onload =() =>{
      for (let i = 0; i < links.length; i++) {
         links[i].addEventListener('click', (event) => {
           event.preventDefault();
-          const id = event.srcElement.dataset.champion;          
+          const id = event.srcElement.dataset.champion;    
+          console.log(id);      
          showDetail(id);
         });
        }
@@ -60,6 +61,7 @@ window.onload =() =>{
     document.getElementById("page2").style.display="none";
     document.getElementById("page3").style.display="block";
     let championDetail = window.data.findChampion(window.LOL,id);
+    console.log(championDetail);
     document.getElementById("champions-detail").innerHTML = `
       <div class="card large">
         <div>
@@ -294,7 +296,7 @@ window.onload =() =>{
 document.getElementById('root').innerHTML=''
 const listAverage=window.data.computeStats(window.LOL);
 let image=["assassin.jpeg","fighter.jpeg","mage.jpeg","marksman.jpeg","support.jpeg","tank.jpeg"];
-new Chart(document.getElementById("lineChart"), {
+new window.Chart(document.getElementById("lineChart"), {
   type: 'line',
   scaleSteps : 1,
   scaleStepWidth : 40,
@@ -339,54 +341,7 @@ new Chart(document.getElementById("lineChart"), {
       display: true
     }
   }
-}); /*
-new Chart(document.getElementById("lineChartHP"), {
-  type: 'line',
-  scaleSteps : 10,
-  scaleStepWidth : 550,
-  scaleStartValue : 0,
-  data: {
-    labels: ["HP"],
-    datasets: [{ 
-        data: [listAverage[0][4]],
-        label: "Assassin",
-        borderColor: "#3e95cd",
-        fill: false
-      }, { 
-        data: [listAverage[1][4]],
-        label: "Fighter",
-        borderColor: "#8e5ea2",
-        fill: false
-      }, { 
-        data: [listAverage[2][4]],
-        label: "Mage",
-        borderColor: "#3cba9f",
-        fill: false
-      }, { 
-        data: [listAverage[3][4]],
-        label: "Marksman",
-        borderColor: "#e8c3b9",
-        fill: false
-      }, { 
-        data: [listAverage[4][4]],
-        label: "Support",
-        borderColor: "#c45850",
-        fill: false
-      }, { 
-        data: [listAverage[5][4]],
-        label: "Tank",
-        borderColor: "#8e5ea2",
-        fill: false
-      }
-    ]
-  },
-  options: {
-    title: {
-      display: true
-    }
-  }
 }); 
-*/
 for(let k=0; k<listAverage.length;k++){
  const average=listAverage[k]; 
  document.getElementById("root").innerHTML+=`
