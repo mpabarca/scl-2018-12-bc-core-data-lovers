@@ -1,4 +1,9 @@
 body{
+    background-image: url("https://na.leagueoflegends.com/sites/default/files/upload/art/shadow_isles_1920x1080.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-color: #0A0A0C;
 }
 
@@ -135,8 +140,8 @@ h2{
 .card.large {
     width: 880px;
     height: auto;
-    margin:40px;
-    margin-left:-10%;
+    margin-top:40px;
+    /*margin-left:-10%;*/
 }
 
 h3{
@@ -199,7 +204,7 @@ div.col.l9{
 and (max-width : 480px) {
     .card.large { 
         width:320px;
-        margin-left:3%;
+        margin:3%;
     }
     
     #champion-name {

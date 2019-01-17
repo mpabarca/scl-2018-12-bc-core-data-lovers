@@ -223,7 +223,7 @@ window.onload =() =>{
               </div>
             </div>
           </div>
-          <hr/>
+          
           <div class="row">
          <hr/>     
         <div class="col l3">
