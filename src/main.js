@@ -21,19 +21,23 @@ window.onload =() =>{
   document.getElementById("page1").style.display="none";
   document.getElementById("page2").style.display="block";
   document.getElementById("page4").style.display="none";
-  showCards(datajson,0);
+  //showCards(datajson,0);
+  showCards(datajson);
 })
  
-  function showCards(data,type) { 
+  //function showCards(data,type) { 
+  function showCards(data) {   
+    const lolData=Object.values(data);
+
     document.getElementById("page3").style.display="none";  
     document.getElementById('root').innerHTML='';
     document.getElementById('champions-list').innerHTML = '';
-    var lolData=[]
+    /*var lolData=[]
     if (type==0){
       lolData= Object.values(data.data);
     }else if (type==1){
       lolData= Object.values(data);
-    }
+    }*/
     for (let i = 0; i < lolData.length; i++) {
      
   document.getElementById('champions-list').innerHTML += `
@@ -55,12 +59,12 @@ window.onload =() =>{
         </div> ` 
       }
      const links = document.getElementsByClassName('link');
-     console.log(links);
+     //console.log(links);
      for (let i = 0; i < links.length; i++) {
         links[i].addEventListener('click', (event) => {
           event.preventDefault();
           const id = event.srcElement.dataset.champion;    
-          console.log(id);      
+          //console.log(id);      
          showDetail(id);
         });
        }
@@ -70,7 +74,6 @@ window.onload =() =>{
     document.getElementById("page2").style.display="none";
     document.getElementById("page3").style.display="block";
     let championDetail = window.data.findChampion(datajson,id);
-    console.log(championDetail);
     document.getElementById("champions-detail").innerHTML = `
       <div class="card large">
         <div>
@@ -267,14 +270,16 @@ window.onload =() =>{
   document.getElementById('selectRol').addEventListener("change",()=>{
     let condition=document.getElementById('selectRol').value;
     let dataFilter=window.data.filterData(datajson,condition);
-    showCards(dataFilter,1);   
+    //showCards(dataFilter,1); 
+    showCards(dataFilter);  
   });
 
   document.getElementById('selectOrder').addEventListener("change",()=>{
     
     let sortOrder=document.getElementById('selectOrder').value;
-    let datasort=window.data.sortData(datajson,"id",sortOrder);
-    showCards(datasort,1);
+    let dataSort=window.data.sortData(datajson,"id",sortOrder);
+    //showCards(datasort,1);
+    showCards(dataSort);
   });
   document.getElementById("champions").addEventListener("click",
   (event) => {
@@ -298,8 +303,7 @@ window.onload =() =>{
   showStats();
   });
 
-  function showStats(){
-  
+  function showStats(){ 
   
   
 document.getElementById('root').innerHTML=''
