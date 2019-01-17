@@ -16,7 +16,8 @@
     "eslint": "^5.9.0",
     "eslint-plugin-jest": "^22.1.2",
     "express": "^4.16.4",
-    "jest": "^23.6.0"
+    "jest": "^23.6.0",
+    "serve-static": "^1.13.2"
   },
   "devDependencies": {
     "htmlhint": "^0.10.1"
