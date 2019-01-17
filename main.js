@@ -53,7 +53,7 @@ window.onload =() =>{
               <p> Defensa: ${ lolData[i].info.defense }</p>
               <p> Magia: ${ lolData[i].info.magic }</p>
               <p> Dificultad: ${ lolData[i].info.difficulty }</p>
-              <span class="link" data-champion='${lolData.id}'>Ver mas</span>
+              <span class="link" data-champion='${lolData[i].id}'>Ver mas</span>
             </div>
           </div>
         </div> ` 
@@ -64,7 +64,7 @@ window.onload =() =>{
         links[i].addEventListener('click', (event) => {
           event.preventDefault();
           const id = event.srcElement.dataset.champion;    
-          //console.log(id);      
+          console.log(id);      
          showDetail(id);
         });
        }
