@@ -18,7 +18,7 @@ window.onload =() =>{
   document.getElementById("start").addEventListener("click",
   (event) => {
   event.preventDefault();
-  document.getElementById("page1").style.display="none";
+  document.getElementById("page-1").style.display="none";
   document.getElementById("page2").style.display="block";
   document.getElementById("page4").style.display="none";
   //showCards(datajson,0);
@@ -284,7 +284,7 @@ window.onload =() =>{
   document.getElementById("champions").addEventListener("click",
   (event) => {
     event.preventDefault();
-    document.getElementById("page1").style.display="none";
+    document.getElementById("page-1").style.display="none";
     document.getElementById("page2").style.display="block";
     document.getElementById("page3").style.display="none";
     document.getElementById("page4").style.display="none";
@@ -296,7 +296,7 @@ window.onload =() =>{
   (event) => {
   event.preventDefault();
   
-  document.getElementById("page1").style.display="none";
+  document.getElementById("page-1").style.display="none";
   document.getElementById("page2").style.display="none";
   document.getElementById("page3").style.display="none";
   document.getElementById("page4").style.display="block";
@@ -550,7 +550,7 @@ for(let k=0; k<listAverage.length;k++){
   document.getElementById("champions-1").addEventListener("click",
   (event) => {
     event.preventDefault();
-    document.getElementById("page1").style.display="none";
+    document.getElementById("page-1").style.display="none";
     document.getElementById("page2").style.display="block";
     document.getElementById("page4").style.display="none";
 
@@ -561,7 +561,7 @@ for(let k=0; k<listAverage.length;k++){
   (event) => {
   event.preventDefault();
   
-  document.getElementById("page1").style.display="none";
+  document.getElementById("page-1").style.display="none";
   document.getElementById("page2").style.display="none";
   document.getElementById("page3").style.display="none";
   document.getElementById("page4").style.display="block";

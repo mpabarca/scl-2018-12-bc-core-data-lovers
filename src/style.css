@@ -14,7 +14,7 @@ body{
     background-attachment: fixed;
     background-color: #0A0A0C;
     margin: 0;
-    margin-bottom: 40px;
+    margin-bottom: 0;
 }
 
 /* HEADER */
@@ -37,7 +37,14 @@ body{
     text-align: center;
 }
 /* FOOTER */
-
+.page-footer{
+    height: 60px;
+    background-color: #19191C;
+    margin-top: 40px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+} 
 /* PAGINA 1 */
 
 /* PAGINA 2 */
@@ -87,13 +94,7 @@ h1{
     color:#D0BFD8;
 }
 
-.page-footer{
-    height: 60px;
-    background-color: #19191C;
-    margin-top: 40px;
-    position: absolute;
-    width: 100%;
-} 
+
 
 #page2{
     display: none;
