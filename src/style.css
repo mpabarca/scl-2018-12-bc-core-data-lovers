@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya:700');
+
 html {
     min-height: 100%;
     position: relative;
@@ -25,11 +27,11 @@ body{
 }
 
 .nav-wrapper li a{   
-    font-size: 20px;
-    padding:10px 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    font-family: 'Alegreya', serif;
     color: #9C865A;
     margin-right: 20px;
+    text-align: center;
 }
 
 h1{
@@ -40,10 +42,15 @@ h1{
 }
 
 #text.col.s12.m6.l6{
-    font-size: 18px ;
+    font-size: 150%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
     color:#D0BFD8;
     margin-top: 10px;
+}
+#text-page1{
+    text-align: justify;
+    width: 45%;
+    margin: 5%;
 }
 
 #page-image.responsive-img.col.s12.m6.l6{
@@ -69,7 +76,6 @@ h1{
 .page-footer{
     height: 60px;
     background-color: #19191C;
-    margin: 10px;
     margin-top: 40px;
     position: absolute;
     bottom: 0;
@@ -198,7 +204,7 @@ ul#mobile-demo.sidenav{
 
 #mobile-demo.sidenav li a{
     color: #9C865A;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Alegreya', serif;
     font-size: 15px;
 }
 div.col.l9{
@@ -238,6 +244,10 @@ and (max-width : 480px) {
         margin-top:20px;
         margin-left:5px;
     }
+    #text-page1{
+        text-align: justify;
+        width: 90%;
+    }
 }
 
 @media only screen
@@ -245,5 +255,9 @@ and (min-width: 480px)and(max-width: 767px) {
     .card.large { 
         width:400px;
         margin-left:-60%;
+    }
+    #text-page1{
+        text-align: justify;
+        width: 90%;
     }
 }
