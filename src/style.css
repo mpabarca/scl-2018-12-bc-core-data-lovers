@@ -1,3 +1,7 @@
+html {
+    min-height: 100%;
+    position: relative;
+  }
 body{
     background-image: url("https://na.leagueoflegends.com/sites/default/files/upload/art/shadow_isles_1920x1080.jpg");
     background-size: cover;
@@ -5,6 +9,8 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-color: #0A0A0C;
+    margin: 0;
+    margin-bottom: 40px;
 }
 
 .nav-wrapper{
@@ -64,7 +70,10 @@ h1{
     height: 60px;
     background-color: #19191C;
     margin: 10px;
-    margin-top: 40px; 
+    margin-top: 40px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 } 
 
 #page2{
