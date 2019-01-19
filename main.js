@@ -13,14 +13,14 @@ document.addEventListener('DOMContentLoaded', function(){
 
 window.onload =() =>{
 
-  document.getElementById("page3").style.display="none";
+  document.getElementById("page-3").style.display="none";
 
   document.getElementById("start").addEventListener("click",
   (event) => {
   event.preventDefault();
-  document.getElementById("page1").style.display="none";
-  document.getElementById("page2").style.display="block";
-  document.getElementById("page4").style.display="none";
+  document.getElementById("page-1").style.display="none";
+  document.getElementById("page-2").style.display="block";
+  document.getElementById("page-4").style.display="none";
   //showCards(datajson,0);
   showCards(datajson);
 })
@@ -29,7 +29,7 @@ window.onload =() =>{
   function showCards(data) {   
     const lolData=Object.values(data);
 
-    document.getElementById("page3").style.display="none";  
+    document.getElementById("page-3").style.display="none";  
     document.getElementById('root').innerHTML='';
     document.getElementById('champions-list').innerHTML = '';
     /*var lolData=[]
@@ -71,8 +71,8 @@ window.onload =() =>{
    }
   function showDetail(id) {
     
-    document.getElementById("page2").style.display="none";
-    document.getElementById("page3").style.display="block";
+    document.getElementById("page-2").style.display="none";
+    document.getElementById("page-3").style.display="block";
     let championDetail = window.data.findChampion(datajson,id);
     document.getElementById("champions-detail").innerHTML = `
       <div class="card large">
@@ -259,9 +259,9 @@ window.onload =() =>{
        for (let i = 0; i < links.length; i++) {
          links[i].addEventListener('click', (event) => {
            event.preventDefault();
-           document.getElementById("page2").style.display="block";
-           document.getElementById("page3").style.display="none";
-           document.getElementById("page4").style.display="none";
+           document.getElementById("page-2").style.display="block";
+           document.getElementById("page-3").style.display="none";
+           document.getElementById("page-4").style.display="none";
            showCards(datajson);
          });
        }
@@ -284,10 +284,10 @@ window.onload =() =>{
   document.getElementById("champions").addEventListener("click",
   (event) => {
     event.preventDefault();
-    document.getElementById("page1").style.display="none";
-    document.getElementById("page2").style.display="block";
-    document.getElementById("page3").style.display="none";
-    document.getElementById("page4").style.display="none";
+    document.getElementById("page-1").style.display="none";
+    document.getElementById("page-2").style.display="block";
+    document.getElementById("page-3").style.display="none";
+    document.getElementById("page-4").style.display="none";
     
     showCards(datajson,0);
   })
@@ -296,10 +296,10 @@ window.onload =() =>{
   (event) => {
   event.preventDefault();
   
-  document.getElementById("page1").style.display="none";
-  document.getElementById("page2").style.display="none";
-  document.getElementById("page3").style.display="none";
-  document.getElementById("page4").style.display="block";
+  document.getElementById("page-1").style.display="none";
+  document.getElementById("page-2").style.display="none";
+  document.getElementById("page-3").style.display="none";
+  document.getElementById("page-4").style.display="block";
   showStats();
   });
 
@@ -545,14 +545,14 @@ for(let k=0; k<listAverage.length;k++){
     window.M.Sidenav.init(elems);
 
   });
-  document.getElementById("page3").style.display="none";
+  document.getElementById("page-3").style.display="none";
 
   document.getElementById("champions-1").addEventListener("click",
   (event) => {
     event.preventDefault();
-    document.getElementById("page1").style.display="none";
-    document.getElementById("page2").style.display="block";
-    document.getElementById("page4").style.display="none";
+    document.getElementById("page-1").style.display="none";
+    document.getElementById("page-2").style.display="block";
+    document.getElementById("page-4").style.display="none";
 
     showCards(datajson);
   });
@@ -561,10 +561,10 @@ for(let k=0; k<listAverage.length;k++){
   (event) => {
   event.preventDefault();
   
-  document.getElementById("page1").style.display="none";
-  document.getElementById("page2").style.display="none";
-  document.getElementById("page3").style.display="none";
-  document.getElementById("page4").style.display="block";
+  document.getElementById("page-1").style.display="none";
+  document.getElementById("page-2").style.display="none";
+  document.getElementById("page-3").style.display="none";
+  document.getElementById("page-4").style.display="block";
   showStats();
   });
 

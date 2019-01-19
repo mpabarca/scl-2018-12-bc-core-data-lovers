@@ -23,118 +23,103 @@
             <li><a target="_blank" href="https://las.leagueoflegends.com/es/game-info/">MÁS SOBRE LOL</a></li>
             <li><a target="_blank" href="https://play.las.leagueoflegends.com/es_AR">COMIENZA A JUGAR</a></li>
         </ul>
-
-        </div>
-      </nav>
+      </div>
+    </nav>
       
       <ul class="sidenav" id="mobile-demo">
-          <li><a href="" id="start-1">INICIO</a></li>
-          <li> <a  id="stats-1">ESTADISTICAS</a></li>
-          <li> <a id="champions-1">CAMPEONES</a></li>
+        <li><a href="" id="start-1">INICIO</a></li>
+        <li> <a  id="stats-1">ESTADISTICAS</a></li>
+        <li> <a id="champions-1">CAMPEONES</a></li>
         <li><a target="_blank" href="https://las.leagueoflegends.com/es/game-info/">MÁS SOBRE LOL</a></li>
         <li><a target="_blank" href="https://play.las.leagueoflegends.com/es_AR">COMIENZA A JUGAR</a></li>
       </ul>
 
   </header>
-      
-      
-      
-      <div id="page1">
-       
-          <div class= "container" style= "width: 85%">           
-                
-                <h1>IMAGEN</h1>        
-            
-                <div id="text" class="col s12 m6 l6">
-         
-                 <p id="text-page1" >League of Legends es un juego de competencia en línea,
-                  fusiona velocidad, intensidad y estrategia. ¡Todo en tiempo real!<br>
-                  Te entregaremos todos los datos necesarios de los
-                  campeones para que estés preparado para comenzar el juego<br>
-                  Comienza ahora a explorar este fantástico mundo!
-                 </p>
-         
+    <div id="page-1">
+      <div class= "container" style= "width: 85%">
+        <div id="text" class="col s12 m6 l6">
+          <p id="text-page1" >League of Legends es un juego de competencia en línea,
+          fusiona velocidad, intensidad y estrategia. ¡Todo en tiempo real!<br>
+          Te entregaremos todos los datos necesarios de los
+          campeones para que estés preparado para comenzar el juego<br>
+          Comienza ahora a explorar este fantástico mundo!
+          </p>
+        </div>
+        <div class="row">
+          <div id="start" class="col l1">
+            <a class="waves-effect waves-teal btn-flat">COMENZAR</a>
           </div>
-
-          <div class="row">
-              <div id="start" class="col l1">
-                <a class="waves-effect waves-teal btn-flat">Comenzar</a>
-              </div>
-             </div>
-             </div>
-            
-            
-
-
-          </div>
+        </div>
+      </div>
+    </div>
         
+    <div class="container">
+
+      <div id="page-2">
+        <div class="row">
+          <div  id="select-filter">    
+            <div id="select1" class="col s12 m6">
+              <select id="selectRol"  >
+                <option value="">Elige tu categoria</option> 
+                <option value="Fighter">Luchador</option>
+                <option value="Mage">Mago</option>
+                <option value="Assassin">Asesino</option>
+                <option value="Tank">Tanque</option>
+                <option value="Marksman">Tirador</option>
+                <option value="Support">Soporte</option>
+              </select>
+            </div>
+          </div>
+          <div id="select-order">    
+            <div id="select2" class="col s12 m6">
+              <select id="selectOrder">
+                <option value="" selected>Ordenar Por:</option>
+                <option value="a-z">a-z</option>
+                <option value="z-a">z-a</option>
+              </select>
+            </div>
+          </div>    
+        </div>
+        <div id="champions-list" class="row" ></div>
+      </div>
+
+      <div class="container">
+        <div id="page-3">
+          <div id="champions-detail" class="row">
+            <h1>Detalle del campeon</h1>
+          </div>
+        </div>
+      </div>
+
+    </div>
+        
+    <div id="page-4" >
+      <h2>Estadisticas de los campeones por rol</h2>
+      <canvas id="lineChart" width="60%" height="20%"></canvas>
+    </div>
+
+    <div id="root" class="row"></div>
+
+    <footer class="page-footer">
+      <div class="footer-copyright">
         <div class="container">
-          <div id="page2">
-            <h2> Campeones</h2>
-            <div class="row">
-              <div  id="select-filter">    
-                <div id="select1" class="col s12 m6">
-                  <select id="selectRol"  >
-                    <option value="">Elige tu categoria</option> 
-                    <option value="Fighter">Luchador</option>
-                    <option value="Mage">Mago</option>
-                    <option value="Assassin">Asesino</option>
-                    <option value="Tank">Tanque</option>
-                    <option value="Marksman">Tirador</option>
-                    <option value="Support">Soporte</option>
-                  </select>
-                </div>
-              </div>
-              <div id="select-order">    
-                <div id="select2" class="col s12 m6">
-                  <select id="selectOrder">
-                    <option value="" selected>Ordenar Por:</option>
-                    <option value="a-z">a-z</option>
-                    <option value="z-a">z-a</option>
-                  </select>
-                </div>
-              </div>    
-            </div>
-            <div id="champions-list" class="row" ></div>
-          </div>
-          <div class="container">
-            <div id="page3">
-              <div id="champions-detail" class="row">
-                <h1>Detalle del campeon</h1>
-              </div>
-            </div>
-          </div>
-          
+          © 2018 Copyright Text
+          <a class="grey-text text-lighten-4 right" href="https://universe.leagueoflegends.com/es_ES/">Universo Lol</a>
         </div>
-        
-        
-        <div id="page4" >
-          <h2>Estadisticas de los campeones por rol</h2>
-          <canvas id="lineChart" width="60%" height="20%"></canvas>
-        </div>
+      </div>
+    </footer>
 
-        <div id="root" class="row"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script>$(document).ready(function(){
+      $(".button-collapse").sideNav()
+    });
+    </script>
 
-        <footer class="page-footer">
-          <div class="footer-copyright">
-            <div class="container">
-              © 2018 Copyright Text
-              <a class="grey-text text-lighten-4 right" href="https://universe.leagueoflegends.com/es_ES/">Universo Lol</a>
-            </div>
-          </div>
-        </footer>
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-        <script>$(document).ready(function(){
-          $(".button-collapse").sideNav()
-        });
-        </script>
-
-        <script src="./data/lol/lol.js"></script> 
-        <!--<script src="./data/lol/lol.json"></script>  -->
-        <script src="data.js"></script>
-        <script src="main.js"></script>
-      </body>
-      </html>
+    <script src="./data/lol/lol.js"></script> 
+    <!--<script src="./data/lol/lol.json"></script>  -->
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

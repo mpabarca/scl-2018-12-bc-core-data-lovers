@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Alegreya:700');
 
+/* CONTENIDO BASE */
 html {
     min-height: 100%;
     position: relative;
@@ -14,18 +15,21 @@ body{
     margin: 0;
     margin-bottom: 40px;
 }
+#root{
+    color:#9C865A;
+}
 
+
+/* HEADER */
 .nav-wrapper{
     background-color: #19191C;
 }
-
 #lol-logo{
     width: 140px;
     height: 50px;
     margin-left: 50px;
     margin-top: 5px;
 }
-
 .nav-wrapper li a{   
     font-size: 18px;
     font-family: 'Alegreya', serif;
@@ -34,13 +38,25 @@ body{
     text-align: center;
 }
 
+
+/* FOOTER */
+.page-footer{
+    height: 60px;
+    background-color: #19191C;
+    margin-top: 40px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+} 
+
+
+/* PAGINA 1 */
 h1{
     font-size: 24px;
     color:#D0BFD8;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
 }
-
 #text.col.s12.m6.l6{
     font-size: 150%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
@@ -52,48 +68,32 @@ h1{
     width: 45%;
     margin: 5%;
 }
-
-#page-image.responsive-img.col.s12.m6.l6{
-    
-    height: 300px;
-    margin-top:20px;
-
-}
-
 #start{
-    float: right;
-    margin-right: 20px;
-    background-color: rgb(141, 113, 56);
-    border-radius: 5px;
+    border: 3px solid rgba(192,252,253,.7);
+    font-size: 18px;
+    font-family: 'Alegreya', serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    background: #1e2328;
+    border-image: linear-gradient(to bottom,#08abac 0,#01698b 100%);
+    border-image-slice: 1;
+    height: 45px;
     width: 130px;
-    text-align: center;
+    right:10%;
 }
-
-#start a{
+a{
     color:#D0BFD8;
 }
 
-.page-footer{
-    height: 60px;
-    background-color: #19191C;
-    margin-top: 40px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-} 
 
-#page2{
+/* PAGINA 2 */
+#page-2{
     display: none;
 }
-
-#page4{
-    display: none;
+.link{
+    color: cadetblue;
+    cursor: pointer;
 }
-
-#root{
-    color:#9C865A;
-}
-
 input.select-dropdown.dropdown-trigger{
     color:#9C865A;
     width: 200px;
@@ -102,12 +102,11 @@ input.select-dropdown.dropdown-trigger{
     margin-top: 20px;
     margin-bottom: 20px;
 }
-
-div.card-image{
-    width: 150px;
-    height: 170px;
+.card .card-reveal {
+    padding: 12px;
+    top: 107%;
+    height: 110%;
 }
-
 .card{
     border-radius: 15px;
     margin:8px;
@@ -115,34 +114,13 @@ div.card-image{
     height: 230px;
     width: 170px;
 }
-
-.card .card-reveal {
-    padding: 12px;
-    top: 107%;
-    height: 110%;
-}
-
 img.responsive-img{
     width: 170px;
     height: 130px;
 }
 
-h2{
-    font-size: 28px;
-    color:#9C865A;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
-    text-align: center;
-}
 
-.waves-effect.waves-light.btn.modal-trigger{
-    background-color:#9C865A;
-}
-
-.link{
-    color: cadetblue;
-    cursor: pointer;
-}
-
+/* PAGINA 3 */
 .link2{
     cursor: pointer;
     float:right;
@@ -151,14 +129,21 @@ h2{
     font-size: 30px;
     color: solid black;
 }
-
 .card.large {
     width: 880px;
     height: auto;
     margin-top:40px;
     /*margin-left:-10%;*/
 }
-
+#image-info{
+    margin: 10px;
+    padding: 10px;
+    float: left;
+}
+#champion-name{
+    margin-left: 250px;
+    float: left;
+}
 h3{
     font-size: 24px;
     color:black;
@@ -166,37 +151,35 @@ h3{
     text-align: center;
 }
 
-#image-info, #info-champion{
-margin: 10px;
-padding: 10px;
-}
 
-#image-info, #champion-name{
-    float: left;
+/* PAGINA 4 */
+#page-4{
+    display: none;
 }
-
- #champion-name{
-    margin-left: 250px;
+h2{
+    font-size: 28px;
+    color:#9C865A;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    text-align: center;
 }
- 
-#info-table{
-    width: 400px;
-    height: 250px;
-    float: right;
-    margin-right: 150px ;
-}
-
-.sidenav-overlay{
-    z-index: 995;
-}
-
 .responsive-image{
     width: 200px;
     height:200px;
     margin-top:40px;
     margin-left: 40px;
 }
+#result-table{
+    color:#D0BFD8;
+}
+div.col.l9{
+    margin-top: 40px;
+}
 
+
+/*RESPONSIVE*/
+.sidenav-overlay{
+    z-index: 995;
+}
 ul#mobile-demo.sidenav{
     background-color: #19191C;
     width: 200px;
@@ -207,14 +190,6 @@ ul#mobile-demo.sidenav{
     font-family: 'Alegreya', serif;
     font-size: 15px;
 }
-div.col.l9{
-    margin-top: 40px;
-}
-
-#result-table{
-    color:#D0BFD8;
-}
-
 @media only screen
 and (max-width : 480px) {
     .card.large { 
