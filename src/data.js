@@ -1,8 +1,8 @@
 window.data ={
 
+  
+  //Filtra la data entregada respecto a la condicion dada
   filterData: (data,condition) => {
-    /*const lolData= data;
-    const championData= Object.values(lolData.data);*/
     const championData=data;
     const category=championData.filter(tipos=>{
     return tipos.tags.indexOf(condition)!==-1;
@@ -10,9 +10,8 @@ window.data ={
     return category;
   },
    
+  //Ordena la data entregada respecto a orden alfabetico 
   sortData: (data,sortBy,sortOrder) => {
-    /*const lolData= data;
-    const championData= Object.values(lolData.data);*/
     const championData=data;
     if(sortBy==="id" && sortOrder === "a-z" ){
       championData.sort((a,b)=>{
@@ -39,9 +38,9 @@ window.data ={
     return championData;
   },
   
+  //Busca un campion por su id y entrega su data
   findChampion: (data,id) => {
     const lolData = data
-    //const championData= Object.values(lolData.data);
     let championInfo;
     for(let i=0; i<lolData.length;i++){
       if(lolData[i].id===id){
@@ -51,7 +50,8 @@ window.data ={
     return championInfo;
     
   },
-  
+
+  //Cálculo del promedio de cada categoria respecto a sus propiedades y el total de campeones
   computeStats: (data) =>{
       let tag=["Assassin","Fighter","Mage","Marksman","Support","Tank"];      
       let list_tag=[];
@@ -61,7 +61,7 @@ window.data ={
           let p=0;
           let list= [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];    
           
-          for (let i=0;i<category.length; i++){ //en algun momento i será la cantidad maxima de campeones
+          for (let i=0;i<category.length; i++){
               
               let champion=category[i] //objeto  
               
