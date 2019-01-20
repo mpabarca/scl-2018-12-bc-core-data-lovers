@@ -161,7 +161,7 @@ h3{
 h2{
     font-size: 28px;
     color:#9C865A;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    font-family: 'Germania One';
     text-align: center;
 }
 .responsive-image{
@@ -176,7 +176,25 @@ h2{
 div.col.l9{
     margin-top: 40px;
 }
-
+#graphic{
+    border: 3px solid rgba(192,252,253,.7);
+    background: #1e2328;
+    border-image: linear-gradient(to bottom,#08abac 0,#01698b 100%);
+    border-image-slice: 1;
+    height: 45px;
+    width: 130px;
+    color:#D0BFD8;
+    font-size: 20px;
+    font-family: 'Germania One';
+    font-weight: 400;
+    top: 50%;
+    left: 50%;
+    text-transform: none;
+    margin-left: 27%;
+}
+#lineChart{
+    bottom: 10%;
+}
 
 /*RESPONSIVE*/
 .sidenav-overlay{
