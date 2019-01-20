@@ -299,177 +299,169 @@ window.onload =() =>{
     for(let k=0; k<listAverage.length;k++){
     const average=listAverage[k]; 
     document.getElementById("root").innerHTML+=`
-    <section class="container" style="width:90%">
-          <div class="row" >
-            <div class="col s6 m3 l3">
-              <img class="responsive-image" src="${image[k]}" >
-            </div>
-            <div class="col l9">
-            <div class="row">
-              
-              <div   class="col s6 m3 l3" >
-                <div class="row">
-                  <div class="col s12 m6 l6">Attack</div>
-                  <div class="col s12 m6 l6" id="result-table">${average[0]}</div>
-                </div>
+      <section class="container" style="width:90%" id="${champion[k]}">
+      <div class="row" >
+          <div class="col s6 m3 l3"><img class="responsive-image" src="${image[k]}"></div>
+          <div class="col l9">
+              <div class="row">
+                  <div class="col s6 m3 l3">
+                      <div class="row">
+                          <div class="col s12 m6 l6">Attack</div>
+                          <div class="col s12 m6 l6" id="result-table">${average[0]}</div>
+                      </div>
+                  </div>
+                  <div class="col s6 m3 l3" >
+                      <div class="row">
+                          <div class="col s12 m6 l6">MP</div>
+                          <div class="col s12 m6 l6" id="result-table">${average[6]}</div>
+                      </div>
+                  </div>
+                  <div class="col s6 m3 l3" >
+                      <div class="row">
+                          <div class="col s12 m6 l6">Spell block per level</div>
+                          <div class="col s12 m6 l6" id="result-table">${average[12]}</div>
+                      </div>
+                  </div>
+                  <div class="col s6 m3 l3" >
+                      <div class="row">
+                          <div class="col s12 m6 l6">Crit</div>
+                          <div class="col s12 m6 l6" id="result-table">${average[18]}</div>
+                      </div>
+                  </div>
               </div>
-              <div class="col s6 m3 l3" >
-                <div class="row">
-                  <div class="col s12 m6 l6">MP</div>
-                  <div class="col s12 m6 l6" id="result-table">${average[6]}</div>
-                </div>
-              </div>
-              <div class="col s6 m3 l3" >
-                <div class="row">
-                  <div class="col s12 m6 l6">Spell block per level</div>
-                  <div class="col s12 m6 l6" id="result-table">${average[12]}</div>
-                </div>
-              </div>
-              <div class="col s6 m3 l3" >
-                <div class="row">
-                  <div class="col s12 m6 l6">Crit</div>
-                  <div class="col s12 m6 l6" id="result-table">${average[18]}</div>
-                </div>
-              </div>
-            </div>
 
-            <div class="row">
-                
-              <div class="col s6 m3 l3">
-                <div class="row">
-                  <div class="col s12 m6 l6">Defense</div>
-                  <div class="col s12 m6 l6" id="result-table">${average[1]}</div>
-                </div>
+              <div class="row">
+                  <div class="col s6 m3 l3">
+                      <div class="row">
+                          <div class="col s12 m6 l6">Defense</div>
+                          <div class="col s12 m6 l6" id="result-table">${average[1]}</div>
+                      </div>
+                  </div>
+                  <div class="col s6 m3 l3">
+                      <div class="row">
+                          <div class="col s12 m6 l6">MP per level</div>
+                          <div class="col s12 m6 l6" id="result-table">${average[7]}</div>
+                      </div>
+                  </div>
+                  <div class="col s6 m3 l3">
+                      <div class="row">
+                          <div class="col s12 m6 l6">Attack range</div>
+                          <div class="col s12 m6 l6" id="result-table">${average[13]}</div>
+                      </div>
+                  </div>
+                  <div class="col s6 m3 l3">
+                      <div class="row">
+                          <div class="col s12 m6 l6">Crit per level</div>
+                          <div class="col s12 m6 l6" id="result-table">${average[19]}</div>
+                      </div>
+                  </div>
               </div>
-              <div class="col s6 m3 l3">
-                <div class="row">
-                  <div class="col s12 m6 l6">MP per level</div>
-                  <div class="col s12 m6 l6" id="result-table">${average[7]}</div>
-                </div>
+              <div class="row">
+                  <div class="col s6 m3 l3" >
+                      <div class="row">
+                          <div class="col s12 m6 l6">Magic</div>
+                          <div class="col s12 m6 l6" id="result-table">${average[2]}</div>
+                      </div>
+                  </div>
+                  <div class="col s6 m3 l3" >
+                      <div class="row">
+                          <div class="col s12 m6 l6">Movespeed</div>
+                          <div class="col s12 m6 l6" id="result-table">${average[8]}</div>
+                      </div>
+                  </div>
+                  <div class="col s6 m3 l3" >
+                      <div class="row">
+                          <div class="col s12 m6 l6">HP regen</div>
+                          <div class="col s12 m6 l6" id="result-table">${average[14]}</div>
+                      </div>
+                  </div>
+                  <div class="col s6 m3 l3" >
+                      <div class="row">
+                          <div class="col s12 m6 l6">Attack damage</div>
+                          <div class="col s12 m6 l6" id="result-table">${average[20]}</div>
+                      </div>
+                  </div>
               </div>
-              <div class="col s6 m3 l3">
-                <div class="row">
-                  <div class="col s12 m6 l6">Attack range</div>
-                  <div class="col s12 m6 l6" id="result-table">${average[13]}</div>
-                </div>
+              <div class="row">
+                  <div class="col s6 m3 l3">
+                      <div class="row">
+                          <div class="col s12 m6 l6">Difficulty</div>
+                          <div class="col s12 m6 l6" id="result-table">${average[3]}</div>
+                      </div>
+                  </div>
+                  <div class="col s6 m3 l3">
+                      <div class="row">
+                          <div class="col s12 m6 l6">Armor</div>
+                          <div class="col s12 m6 l6" id="result-table">${average[9]}</div>
+                      </div>
+                  </div>
+                  <div class="col s6 m3 l3">
+                      <div class="row">
+                          <div class="col s12 m6 l6">HP Regen per level</div>
+                          <div class="col s12 m6 l6" id="result-table">${average[15]}</div>
+                      </div>
+                  </div>
+                  <div class="col s6 m3 l3">
+                      <div class="row">
+                          <div class="col s12 m6 l6">Attack damage per level</div>
+                          <div class="col s12 m6 l6" id="result-table">${average[21]}</div>
+                      </div>
+                  </div>
               </div>
-              <div class="col s6 m3 l3">
-                <div class="row">
-                  <div class="col s12 m6 l6">Crit per level</div>
-                  <div class="col s12 m6 l6" id="result-table">${average[19]}</div>
-                </div>
+              <div class="row">                
+                  <div class="col s6 m3 l3" >
+                      <div class="row">
+                          <div class="col s12 m6 l6">HP</div>
+                          <div class="col s12 m6 l6" id="result-table">${average[4]}</div>
+                      </div>
+                  </div>
+                  <div class="col s6 m3 l3" >
+                      <div class="row">
+                          <div class="col s12 m6 l6">Armor per level</div>
+                          <div class="col s12 m6 l6" id="result-table">${average[10]}</div>
+                      </div>
+                  </div>
+                  <div class="col s6 m3 l3" >
+                      <div class="row">
+                          <div class="col s12 m6 l6">MP Regen per level</div>
+                          <div class="col s12 m6 l6" id="result-table">${average[16]}</div>
+                      </div>
+                  </div>
+                  <div class="col s6 m3 l3" >
+                      <div class="row">
+                          <div class="col s12 m6 l6">Attack speed offset</div>
+                          <div class="col s12 m6 l6" id="result-table">${average[22]}</div>
+                      </div>
+                  </div>
               </div>
-            </div>
-            <div class="row">
-                
-              <div class="col s6 m3 l3" >
-                <div class="row">
-                  <div class="col s12 m6 l6">Magic</div>
-                  <div class="col s12 m6 l6" id="result-table">${average[2]}</div>
-                </div>
-              </div>
-              <div class="col s6 m3 l3" >
-                <div class="row">
-                  <div class="col s12 m6 l6">Movespeed</div>
-                  <div class="col s12 m6 l6" id="result-table">${average[8]}</div>
-                </div>
-              </div>
-              <div class="col s6 m3 l3" >
-                <div class="row">
-                  <div class="col s12 m6 l6">HP regen</div>
-                  <div class="col s12 m6 l6" id="result-table">${average[14]}</div>
-                </div>
-              </div>
-              <div class="col s6 m3 l3" >
-                <div class="row">
-                  <div class="col s12 m6 l6">Attack damage</div>
-                  <div class="col s12 m6 l6" id="result-table">${average[20]}</div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-                
-              <div class="col s6 m3 l3">
-                <div class="row">
-                  <div class="col s12 m6 l6">Difficulty</div>
-                  <div class="col s12 m6 l6" id="result-table">${average[3]}</div>
-                </div>
-              </div>
-              <div class="col s6 m3 l3">
-                <div class="row">
-                  <div class="col s12 m6 l6">Armor</div>
-                  <div class="col s12 m6 l6" id="result-table">${average[9]}</div>
-                </div>
-              </div>
-              <div class="col s6 m3 l3">
-                <div class="row">
-                  <div class="col s12 m6 l6">HP Regen per level</div>
-                  <div class="col s12 m6 l6" id="result-table">${average[15]}</div>
-                </div>
-              </div>
-              <div class="col s6 m3 l3">
-                <div class="row">
-                  <div class="col s12 m6 l6">Attack damage per level</div>
-                  <div class="col s12 m6 l6" id="result-table">${average[21]}</div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-                
-              <div class="col s6 m3 l3" >
-                <div class="row">
-                  <div class="col s12 m6 l6">HP</div>
-                  <div class="col s12 m6 l6" id="result-table">${average[4]}</div>
-                </div>
-              </div>
-              <div class="col s6 m3 l3" >
-                <div class="row">
-                  <div class="col s12 m6 l6">Armor per level</div>
-                  <div class="col s12 m6 l6" id="result-table">${average[10]}</div>
-                </div>
-              </div>
-              <div class="col s6 m3 l3" >
-                <div class="row">
-                  <div class="col s12 m6 l6">MP Regen per level</div>
-                  <div class="col s12 m6 l6" id="result-table">${average[16]}</div>
-                </div>
-              </div>
-              <div class="col s6 m3 l3" >
-                <div class="row">
-                  <div class="col s12 m6 l6">Attack speed offset</div>
-                  <div class="col s12 m6 l6" id="result-table">${average[22]}</div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-                
-              <div class="col s6 m3 l3">
-                <div class="row">
-                  <div class="col s12 m6 l6">HP per level</div>
-                  <div class="col s12 m6 l6" id="result-table">${average[5]}</div>
-                </div>
-              </div>
-              <div class="col s6 m3 l3">
-                <div class="row">
-                  <div class="col s12 m6 l6">Spell block</div>
-                  <div class="col s12 m6 l6" id="result-table">${average[11]}</div>
-                </div>
-              </div>
-              <div class="col s6 m3 l3">
-                <div class="row">
-                  <div class="col s12 m6 l6">MP Regen per level</div>
-                  <div class="col s12 m6 l6" id="result-table">${average[17]}</div>
-                </div>
-              </div>
-              <div class="col s6 m3 l3">
-                <div class="row">
-                  <div class="col s12 m6 l6">Attack speed per level</div>
-                  <div class="col s12 m6 l6" id="result-table">${average[23]}</div>
-                </div>
+              <div class="row">
+                  <div class="col s6 m3 l3">
+                      <div class="row">
+                          <div class="col s12 m6 l6">HP per level</div>
+                          <div class="col s12 m6 l6" id="result-table">${average[5]}</div>
+                      </div>
+                  </div>
+                  <div class="col s6 m3 l3">
+                      <div class="row">
+                          <div class="col s12 m6 l6">Spell block</div>
+                          <div class="col s12 m6 l6" id="result-table">${average[11]}</div>
+                      </div>
+                  </div>
+                  <div class="col s6 m3 l3">
+                      <div class="row">
+                          <div class="col s12 m6 l6">MP Regen per level</div>
+                          <div class="col s12 m6 l6" id="result-table">${average[17]}</div>
+                      </div>
+                  </div>
+                  <div class="col s6 m3 l3">
+                      <div class="row">
+                          <div class="col s12 m6 l6">Attack speed per level</div>
+                          <div class="col s12 m6 l6" id="result-table">${average[23]}</div>
+                      </div>
+                  </div>
               </div>
             </div>
           </div>
-        </div>
       </section>
       <hr/>   
     `
