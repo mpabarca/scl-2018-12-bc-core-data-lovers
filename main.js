@@ -19,6 +19,8 @@ window.onload =() =>{
   document.getElementById("start").addEventListener("click",
   (event) => {
   event.preventDefault();
+  document.getElementById("stats").style.background="#19191C";
+  document.getElementById("champions").style.background="#0A0A0C";
   document.getElementById("page-1").style.display="none";
   document.getElementById("page-2").style.display="block";
   document.getElementById("page-4").style.display="none";
@@ -273,6 +275,8 @@ window.onload =() =>{
 
   document.getElementById("champions").addEventListener("click",(event) => {
     event.preventDefault();
+    document.getElementById("stats").style.background="#19191C";
+    document.getElementById("champions").style.background="#0A0A0C";
     document.getElementById("page-1").style.display="none";
     document.getElementById("page-2").style.display="block";
     document.getElementById("page-3").style.display="none";
@@ -282,6 +286,8 @@ window.onload =() =>{
 
   document.getElementById("stats").addEventListener("click",(event) => {
   event.preventDefault();
+  document.getElementById("stats").style.background="#0A0A0C";
+  document.getElementById("champions").style.background="#19191C";
   document.getElementById("page-1").style.display="none";
   document.getElementById("page-2").style.display="none";
   document.getElementById("page-3").style.display="none";
@@ -513,6 +519,17 @@ window.onload =() =>{
       }
     }); 
   }
+  
+  document.getElementById("page-3").style.display="none";
+  document.getElementById("inicio").addEventListener("click",
+  (event) => {
+  event.preventDefault();
+  document.getElementById("stats").style.background="#19191C";
+  document.getElementById("champions").style.background="#19191C";
+  document.getElementById("page-1").style.display="block";
+  document.getElementById("page-2").style.display="none";
+  document.getElementById("page-4").style.display="none";
+  });
 
  // Menu responsive
   document.addEventListener('DOMContentLoaded', function() {
