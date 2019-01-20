@@ -6,13 +6,13 @@
 html {
     min-height: 100%;
     position: relative;
-    background-image: url(page1.jpg);
+    background-image: url(page4.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-color: #0A0A0C;
-  }
+}
 body{
     
     margin: 0;

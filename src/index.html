@@ -35,16 +35,16 @@
       </ul>
 
   </header>
-    <div id="page-1" class= "container" style= "width: 85%">
-      <div id="welcome" class="col s12 m6 l6">
-        <p id="text-page1" >League of Legends es un juego de competencia en línea,
-        fusiona velocidad, intensidad y estrategia.<br> ¡Todo en tiempo real!<br>
-        Obtendrás todos los datos necesarios de los
-        campeones para tú preparación en el juego
-        </p>
-        <a id="start" class="btn btn-primary">Comenzar</a>
-      </div>
+  <div id="page-1" class= "container" style= "width: 85%">
+    <div id="welcome" class="col s12 m6 l6">
+      <p id="text-page1" >League of Legends es un juego de competencia en línea,
+      fusiona velocidad, intensidad y estrategia.<br> ¡Todo en tiempo real!<br>
+      Obtendrás todos los datos necesarios de los
+      campeones para tú preparación en el juego
+      </p>
+      <a id="start" class="btn btn-primary">Comenzar</a>
     </div>
+  </div>
         
     <div class="container">
 
@@ -88,6 +88,21 @@
         
     <div id="page-4" >
       <h2>Estadisticas de los campeones por rol</h2>
+      <section id="listChampeons" class="container" style="width:75%; height:50%;">
+        <div class="row">
+          <div class="col s2 m4 l4" style="width: 25%"><img id="assassin" src="assassin.png" alt="" style="width:90%" ></div>
+          <div class="col s2 m4 l4" style="width: 25%"><img id="fighter" src="fighter.png" alt="" style="width:90%" ></div>
+          <div class="col s2 m4 l4" style="width: 25%"><img id="mage" src="mage.png" alt="" style="width:90%"></div>
+          <div class="col s2 m4 l4" style="width: 25%"><img id="marksman" src="marksman.png" alt="" style="width:90%"></div>
+        </div>
+        <div class="row" style="left: 20%">
+          <div class="col s2 m4 l4" style="width: 25%"></div>
+          <div class="col s2 m4 l4" style="width: 25%"><img id="support" src="support.png" alt="" style="width:90%"></div>
+          <div class="col s2 m4 l4" style="width: 25%"><img id="tank" src="tank.png" alt="" style="width:90%"></div>
+          <div class="col s2 m4 l4" style="width: 25%"></div>
+        </div>
+      </section>
+      <div id="root" class="row"></div>
       <canvas id="lineChart" width="60%" height="20%"></canvas>
     </div>
 

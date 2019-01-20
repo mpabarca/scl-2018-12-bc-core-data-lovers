@@ -290,56 +290,12 @@ window.onload =() =>{
   });
 
   function showStats(){ 
+
     document.getElementById('root').innerHTML=''
     const listAverage=window.data.computeStats(datajson);
-    let image=["assassin.jpeg","fighter.jpeg","mage.jpeg","marksman.jpeg","support.jpeg","tank.jpeg"];
-    new window.Chart(document.getElementById("lineChart"), {
-      type: 'line',
-      scaleSteps : 1,
-      scaleStepWidth : 40,
-      scaleStartValue : 0,
-      data: {
-        labels: ["Attack","Defense","Magic","Difficulty","MP"],
-        datasets: [{ 
-            data: [listAverage[0][0],listAverage[0][1],listAverage[0][2],listAverage[0][3],listAverage[0][6]],
-            label: "Assassin",
-            borderColsor: "#3e95cd",
-            fill: true
-          }, { 
-            data: [listAverage[1][0],listAverage[1][1],listAverage[1][2],listAverage[1][3],listAverage[1][6]],
-            label: "Fighter",
-            borderColor: "#8e5ea2",
-            fill: true
-          }, { 
-            data: [listAverage[2][0],listAverage[2][1],listAverage[2][2],listAverage[2][3],listAverage[2][6]],
-            label: "Mage",
-            borderColor: "#3cba9f",
-            fill: true
-          }, { 
-            data: [listAverage[3][0],listAverage[3][1],listAverage[3][2],listAverage[3][3],listAverage[3][6]],
-            label: "Marksman",
-            borderColor: "#e8c3b9",
-            fill: true
-          }, { 
-            data: [listAverage[4][0],listAverage[4][1],listAverage[4][2],listAverage[4][3],listAverage[4][6]],
-            label: "Support",
-            borderColor: "#c45850",
-            fill: true
-          }, { 
-            data: [listAverage[5][0],listAverage[5][1],listAverage[5][2],listAverage[5][3],listAverage[5][6]],
-            label: "Tank",
-            borderColor: "#9C865A",
-            fill: true
-          }
-        ]
-      },
-      options: {
-        title: {
-          display: true
-        }
-      }
-    }); 
-
+    let image=["assassin.png","fighter.png","mage.png","marksman.png","support.png","tank.png"];
+    let champion=["assassin","fighter","mage","marksman","support","tank"];
+    
     for(let k=0; k<listAverage.length;k++){
     const average=listAverage[k]; 
     document.getElementById("root").innerHTML+=`
@@ -518,6 +474,52 @@ window.onload =() =>{
       <hr/>   
     `
     }
+    new window.Chart(document.getElementById("lineChart"), {
+      type: 'line',
+      scaleSteps : 1,
+      scaleStepWidth : 40,
+      scaleStartValue : 0,
+      data: {
+        labels: ["Attack","Defense","Magic","Difficulty","MP"],
+        datasets: [{ 
+            data: [listAverage[0][0],listAverage[0][1],listAverage[0][2],listAverage[0][3],listAverage[0][6]],
+            label: "Assassin",
+            borderColsor: "#3e95cd",
+            fill: true
+          }, { 
+            data: [listAverage[1][0],listAverage[1][1],listAverage[1][2],listAverage[1][3],listAverage[1][6]],
+            label: "Fighter",
+            borderColor: "#8e5ea2",
+            fill: true
+          }, { 
+            data: [listAverage[2][0],listAverage[2][1],listAverage[2][2],listAverage[2][3],listAverage[2][6]],
+            label: "Mage",
+            borderColor: "#3cba9f",
+            fill: true
+          }, { 
+            data: [listAverage[3][0],listAverage[3][1],listAverage[3][2],listAverage[3][3],listAverage[3][6]],
+            label: "Marksman",
+            borderColor: "#e8c3b9",
+            fill: true
+          }, { 
+            data: [listAverage[4][0],listAverage[4][1],listAverage[4][2],listAverage[4][3],listAverage[4][6]],
+            label: "Support",
+            borderColor: "#c45850",
+            fill: true
+          }, { 
+            data: [listAverage[5][0],listAverage[5][1],listAverage[5][2],listAverage[5][3],listAverage[5][6]],
+            label: "Tank",
+            borderColor: "#9C865A",
+            fill: true
+          }
+        ]
+      },
+      options: {
+        title: {
+          display: true
+        }
+      }
+    }); 
   }
 
  // Menu responsive
