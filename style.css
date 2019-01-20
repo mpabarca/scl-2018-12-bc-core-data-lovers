@@ -1,17 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=Alegreya:700');
+/*@import url('https://fonts.googleapis.com/css?family=Alegreya:700');*/
+@import url('https://fonts.googleapis.com/css?family=Germania+One');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 /* CONTENIDO BASE */
 html {
     min-height: 100%;
     position: relative;
-  }
-body{
-    background-image: url("https://na.leagueoflegends.com/sites/default/files/upload/art/shadow_isles_1920x1080.jpg");
+    background-image: url(page1.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-color: #0A0A0C;
+  }
+body{
+    
     margin: 0;
     margin-bottom: 40px;
 }
@@ -27,12 +30,12 @@ body{
 #lol-logo{
     width: 140px;
     height: 50px;
-    margin-left: 50px;
+    margin-left: 70%;
     margin-top: 5px;
 }
 .nav-wrapper li a{   
-    font-size: 18px;
-    font-family: 'Alegreya', serif;
+    font-size: 20px;
+    font-family: 'Germania One';
     color: #9C865A;
     margin-right: 20px;
     text-align: center;
@@ -49,46 +52,42 @@ body{
     width: 100%;
 } 
 
-
 /* PAGINA 1 */
-h1{
-    font-size: 24px;
+#welcome.col.s12.m6.l6{
+    font-size: 120%;
+    font-family: 'Roboto', sans-serif;
     color:#D0BFD8;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align: center;
-}
-#text.col.s12.m6.l6{
-    font-size: 150%;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
-    color:#D0BFD8;
-    margin-top: 10px;
-}
-#text-page1{
     text-align: justify;
-    width: 45%;
-    margin: 5%;
+    width: 40%;
+    margin-top: 10%;
+    margin-bottom: 5%;
 }
 #start{
     border: 3px solid rgba(192,252,253,.7);
-    font-size: 18px;
-    font-family: 'Alegreya', serif;
-    font-weight: 400;
-    text-transform: uppercase;
     background: #1e2328;
     border-image: linear-gradient(to bottom,#08abac 0,#01698b 100%);
     border-image-slice: 1;
     height: 45px;
     width: 130px;
-    right:10%;
-}
-a{
     color:#D0BFD8;
+    font-size: 20px;
+    font-family: 'Germania One';
+    font-weight: 400;
+    top: 50%;
+    left: 50%;
+    margin-top: 5%;
 }
 
 
 /* PAGINA 2 */
 #page-2{
     display: none;
+}
+h1{
+    font-size: 24px;
+    color:#D0BFD8;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
 }
 .link{
     color: cadetblue;
