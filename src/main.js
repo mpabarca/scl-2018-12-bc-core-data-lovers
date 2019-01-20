@@ -300,7 +300,7 @@ window.onload =() =>{
     const average=listAverage[k]; 
     document.getElementById("root").innerHTML+=`
       <section class="container" style="width:90%" id="${champion[k]}">
-      <div class="row" >
+      <div class="row">
           <div class="col s6 m3 l3"><img class="responsive-image" src="${image[k]}"></div>
           <div class="col l9">
               <div class="row">
