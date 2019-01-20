@@ -25,7 +25,7 @@ body{
 
 /* HEADER */
 .nav-wrapper{
-    background-color: #19191C;
+    background-color: #19191C;    
 }
 #lol-logo{
     width: 140px;
@@ -39,6 +39,9 @@ body{
     color: #9C865A;
     margin-right: 20px;
     text-align: center;
+}
+ul li:hover a {
+    background: #0A0A0C;
 }
 
 
