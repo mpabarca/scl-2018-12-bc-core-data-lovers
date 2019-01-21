@@ -518,7 +518,13 @@ window.onload =() =>{
       options: {
         title: {
           display: true
-        }
+        },
+        legend: { 
+          labels: { 
+           fontColor: "white", 
+           fontSize: 18 
+          } 
+         }, 
       }
     }); 
   }
