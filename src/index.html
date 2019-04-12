@@ -11,7 +11,7 @@
 
 <body>
   
-  <header class="navbar-fixed">
+  <section class="navbar-fixed">
     <nav>
       <div class="nav-wrapper">
         <a href="#!" class="brand-logo"><img class="responsive-img" id="lol-logo" src="http://i.picasion.com/pic88/b5ff07cb77c0782ac41329acbd770506.gif" alt=""></a>
@@ -34,17 +34,23 @@
         <li><a target="_blank" href="https://play.las.leagueoflegends.com/es_AR">Comienza a jugar</a></li>
       </ul>
 
-  </header>
-  <div id="page-1" class= "container" style= "width: 85%">
+  </section>
+
+  <header id="page-1" class= "container content" style= "width: 85%">
+    <div class="header-video">
+      <video src="./img/video.mp4" autoplay loop></video>
+    </div>
+
+    <div class="header-overlay"></div>
+
     <div id="welcome" class="col s12 m6 l6">
-      <p id="text-page1" >League of Legends es un juego de competencia en línea,
-      fusiona velocidad, intensidad y estrategia.<br> ¡Todo en tiempo real!<br>
-      Obtendrás todos los datos necesarios de los
-      campeones para tú preparación en el juego
+      <p id="text-page1" >
+        Para obtener todos los datos necesarios de los
+      campeones para tú preparación en el juego haz click en comenzar
       </p>
       <a id="start" class="btn btn-primary">Comenzar</a>
     </div>
-  </div>
+  </header>
         
     <div class="container">
 
@@ -90,15 +96,15 @@
       <h2>PROMEDIO DE LOS CAMPEONES POR ROL</h2>
       <section id="listChampeons" class="container" style="width:75%; height:50%;">
         <div class="row">
-          <a class="col s2 m4 l4" style="width: 25%" href="#assassin"><img  src="assassin.png" alt="" style="width:90%" ></a>
-          <a class="col s2 m4 l4" style="width: 25%" href="#fighter"><img  src="fighter.png" alt="" style="width:90%" ></a>
-          <a class="col s2 m4 l4" style="width: 25%" href="#mage"><img  src="mage.png" alt="" style="width:90%"></a>
-          <a class="col s2 m4 l4" style="width: 25%" href="#marksman"><img src="marksman.png" alt="" style="width:90%"></a>
+          <a class="col s2 m4 l4" style="width: 25%" href="#assassin"><img  src="./img/assassin.png" alt="" style="width:90%" ></a>
+          <a class="col s2 m4 l4" style="width: 25%" href="#fighter"><img  src="./img/fighter.png" alt="" style="width:90%" ></a>
+          <a class="col s2 m4 l4" style="width: 25%" href="#mage"><img  src="./img/mage.png" alt="" style="width:90%"></a>
+          <a class="col s2 m4 l4" style="width: 25%" href="#marksman"><img src="./img/marksman.png" alt="" style="width:90%"></a>
         </div>
         <div class="row" style="left: 20%">
           <a class="col s2 m4 l4" style="width: 25%"></a>
-          <a class="col s2 m4 l4" style="width: 25%" href="#support"><img src="support.png" alt="" style="width:90%"></a>
-          <a class="col s2 m4 l4" style="width: 25%" href="#tank"><img src="tank.png" alt="" style="width:90%"></a>
+          <a class="col s2 m4 l4" style="width: 25%" href="#support"><img src="./img/support.png" alt="" style="width:90%"></a>
+          <a class="col s2 m4 l4" style="width: 25%" href="#tank"><img src="./img/tank.png" alt="" style="width:90%"></a>
           <a class="col s2 m4 l4" style="width: 25%"></a>
         </div>
       </section>

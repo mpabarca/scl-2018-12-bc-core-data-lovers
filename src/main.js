@@ -299,7 +299,7 @@ window.onload =() =>{
 
     document.getElementById('root').innerHTML=''
     const listAverage=window.data.computeStats(datajson);
-    let image=["assassin.png","fighter.png","mage.png","marksman.png","support.png","tank.png"];
+    let image=["./img/assassin.png","./img/fighter.png","./img/mage.png","./img/marksman.png","./img/support.png","./img/tank.png"];
     let champion=["assassin","fighter","mage","marksman","support","tank"];
     
     for(let k=0; k<listAverage.length;k++){
