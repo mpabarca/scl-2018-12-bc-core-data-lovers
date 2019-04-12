@@ -3,10 +3,13 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 /* CONTENIDO BASE */
+*{
+    box-sizing: border-box;
+}
 html {
     min-height: 100%;
     position: relative;
-    background-image: url(page4.jpg);
+    background-image: url(./img/page4.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -14,7 +17,7 @@ html {
     background-color: #0A0A0C;
 }
 body{
-    
+    overflow-x: hidden;
     margin: 0;
     margin-bottom: 40px;
 }
@@ -23,7 +26,7 @@ body{
 }
 
 
-/* HEADER */
+/* NAVBAR */
 .nav-wrapper{
     background-color: #19191C;    
 }
@@ -56,14 +59,50 @@ ul li:hover a {
 } 
 
 /* PAGINA 1 */
+header{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.content{
+    max-width: 49rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: auto;
+    text-align: center;
+}
+.header-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+
+}
+.header-video video{
+    min-width: 100%;
+    min-height: 100%;
+}
+.header-overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #303952;
+    z-index: 1;
+    opacity: 0.6;
+}
 #welcome.col.s12.m6.l6{
+    z-index: 2;
     font-size: 120%;
     font-family: 'Roboto', sans-serif;
     color:#D0BFD8;
     text-align: justify;
     width: 40%;
     margin-top: 10%;
-    margin-bottom: 5%;
+    margin-bottom: 0;
+    margin-left: 0;
 }
 #start{
     border: 3px solid rgba(192,252,253,.7);
